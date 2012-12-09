@@ -1,0 +1,612 @@
+--os api
+
+
+function drawLogo(X, Y)
+term.setCursorPos(X+1, Y)
+term.setBackgroundColour(colours.cyan)
+print("          ")
+term.setCursorPos(X, Y+1) 
+print("   0    0   ")
+term.setCursorPos(X, Y+2)
+print("            ")
+term.setCursorPos(X, Y+3)
+print("            ")
+term.setCursorPos(X+12, Y+3)
+print(" ")
+term.setCursorPos(X+13, Y+2)
+print(" ")
+term.setCursorPos(X+14, Y+2)
+print(" ")
+term.setCursorPos(X+15, Y+1)
+print(" ")
+term.setCursorPos(X+16, Y+1)
+print(" ")
+term.setCursorPos(X+1, Y+4)
+print("          ")
+
+term.setBackgroundColour(colours.white)
+term.setCursorPos(X+3, Y+1)
+print(" ")
+term.setCursorPos(X+8, Y+1)
+print(" ")
+term.setCursorPos(X+2, Y+3)
+print("        ")
+term.setBackgroundColour(colors.white)
+term.setTextColour(128)
+term.setCursorPos(X+2, Y+6)
+print("NDFSolus")
+end
+
+
+function GCSContextMenu1Text(x, y)
+term.setBackgroundColor(colors.purple)
+term.setTextColor(colors.white)
+term.setCursorPos(x,y)
+print(" About      ")
+term.setCursorPos(x,y+1)
+print(" Toggle All ")
+term.setCursorPos(x,y+2)
+print(" Desktop    ")
+term.setCursorPos(x,y+3)
+print(" Shutdown   ")
+term.setCursorPos(x,y+4)
+print(" Properties ")
+end
+
+
+function GCSContextMenu2Text(x, y)
+term.setBackgroundColor(colors.gray)
+term.setTextColor(colors.white)
+term.setCursorPos(x,y)
+print(" .:OFF:.  ")
+term.setCursorPos(x,y+1)
+print(" .:ON :.  ")
+end
+
+function drawStartMenu(x, y)
+term.setBackgroundColor(128)
+term.setTextColor(colors.white)
+term.setCursorPos(x,y)
+print("                ")
+term.setCursorPos(x,y+1)
+print("  Help          ")
+term.setCursorPos(x,y+2)
+print("  Control Panel ")
+term.setCursorPos(x,y+3)
+print("  Programs      ")
+term.setCursorPos(x,y+4)
+print("  Reboot        ")
+term.setCursorPos(x,y+5)
+print("  Shutdown      ")
+term.setCursorPos(x,y+6)
+print("                ")
+end
+
+
+
+function drawContextMenu2(x, y, a, b)
+term.setBackgroundColor(colors.gray)
+for x=x, a do
+for y=y, b do
+term.setCursorPos(x,y)
+print(" ")
+end
+end  
+end
+
+
+
+function drawActionMenu1()
+term.setBackgroundColor(colors.gray)
+term.setTextColour(colours.white)
+print("              ")
+print("              ")
+print("              ")
+print("              ")
+print("              ")
+print("              ")
+print("              ")
+print("              ")
+
+
+end
+
+
+function drawActionMenu2()
+term.setBackgroundColor(colors.gray)
+term.setTextColour(colours.white)
+print("              ")
+print("              ")
+print("              ")
+print("              ")
+print("              ")
+print("              ")
+print("              ")
+print("              ")
+print("              ")
+print("              ")
+
+
+end
+
+
+function drawAbout()
+
+
+
+end
+
+
+function drawIcon(label, X, Y)
+term.setBackgroundColour(128)
+term.setCursorPos(X, Y)
+print("   ")
+term.setCursorPos(X, Y+1)
+print("    ")
+term.setCursorPos(X, Y+2)
+print("    ")
+term.setCursorPos(X, Y+3)
+print("    ")
+term.setBackgroundColour(colors.white)
+term.setTextColor(128)
+term.setCursorPos(X, Y+5)
+print(label)
+
+
+
+end
+
+function titleTime()
+term.setBackgroundColor(128)
+term.setTextColor(colors.cyan)
+
+term.setCursorPos(43,1)
+print(textutils.formatTime(os.time()))
+
+end
+
+
+function titleBar()
+term.setBackgroundColor(128)
+term.setTextColor(colors.cyan)
+term.setCursorPos(1,1)
+term.clearLine()
+term.setCursorPos(2,1)
+print("|Start|")
+end
+
+
+function drawLoading()
+
+
+
+end
+
+
+function drawNavigation()
+
+
+
+end
+
+
+function bgColour()
+
+
+
+end
+
+
+function txtColour()
+
+
+
+end
+
+function printN()
+term.setCursorPos(9,5)
+term.setBackgroundColor(colors.black)
+print(" ")
+term.setCursorPos(9,6)
+term.setBackgroundColor(colors.black)
+print(" ")
+term.setCursorPos(9,7)
+term.setBackgroundColor(colors.black)
+print(" ")
+term.setCursorPos(9,8)
+term.setBackgroundColor(colors.black)
+print(" ")
+term.setCursorPos(9,9)
+term.setBackgroundColor(colors.black)
+print(" ")
+term.setCursorPos(9,10)
+term.setBackgroundColor(colors.black)
+print(" ")
+term.setCursorPos(9,11)
+term.setBackgroundColor(colors.black)
+print(" ")
+term.setCursorPos(9,12)
+term.setBackgroundColor(colors.black)
+print(" ")
+term.setCursorPos(9,13)
+term.setBackgroundColor(colors.black)
+print(" ")
+term.setCursorPos(9,14)
+term.setBackgroundColor(colors.black)
+print(" ")
+
+
+term.setCursorPos(10,6)
+term.setBackgroundColor(colors.black)
+print(" ")
+term.setCursorPos(11,7)
+term.setBackgroundColor(colors.black)
+print(" ")
+term.setCursorPos(12,8)
+term.setBackgroundColor(colors.black)
+print(" ")
+term.setCursorPos(13,9)
+term.setBackgroundColor(colors.black)
+print(" ")
+term.setCursorPos(14,10)
+term.setBackgroundColor(colors.black)
+print(" ")
+term.setCursorPos(15,11)
+term.setBackgroundColor(colors.black)
+print(" ")
+term.setCursorPos(16,12)
+term.setBackgroundColor(colors.black)
+print(" ")
+term.setCursorPos(17,13)
+term.setBackgroundColor(colors.black)
+print(" ")
+
+
+
+term.setCursorPos(18,5)
+term.setBackgroundColor(colors.black)
+print(" ")
+term.setCursorPos(18,6)
+term.setBackgroundColor(colors.black)
+print(" ")
+term.setCursorPos(18,7)
+term.setBackgroundColor(colors.black)
+print(" ")
+term.setCursorPos(18,8)
+term.setBackgroundColor(colors.black)
+print(" ")
+term.setCursorPos(18,9)
+term.setBackgroundColor(colors.black)
+print(" ")
+term.setCursorPos(18,10)
+term.setBackgroundColor(colors.black)
+print(" ")
+term.setCursorPos(18,11)
+term.setBackgroundColor(colors.black)
+print(" ")
+term.setCursorPos(18,12)
+term.setBackgroundColor(colors.black)
+print(" ")
+term.setCursorPos(18,13)
+term.setBackgroundColor(colors.black)
+print(" ")
+term.setCursorPos(18,14)
+term.setBackgroundColor(colors.black)
+print(" ")
+
+end
+
+function printD()
+term.setCursorPos(21,5)
+term.setBackgroundColor(colors.black)
+print("    ")
+term.setCursorPos(21,6)
+term.setBackgroundColor(colors.black)
+print(" ")
+term.setCursorPos(21,7)
+term.setBackgroundColor(colors.black)
+print(" ")
+term.setCursorPos(21,8)
+term.setBackgroundColor(colors.black)
+print(" ")
+term.setCursorPos(21,9)
+term.setBackgroundColor(colors.black)
+print(" ")
+term.setCursorPos(21,10)
+term.setBackgroundColor(colors.black)
+print(" ")
+term.setCursorPos(21,11)
+term.setBackgroundColor(colors.black)
+print(" ")
+term.setCursorPos(21,12)
+term.setBackgroundColor(colors.black)
+print(" ")
+term.setCursorPos(21,13)
+term.setBackgroundColor(colors.black)
+print(" ")
+term.setCursorPos(21,14)
+term.setBackgroundColor(colors.black)
+print("    ")
+
+
+term.setCursorPos(25,6)
+term.setBackgroundColor(colors.black)
+print(" ")
+term.setCursorPos(26,7)
+term.setBackgroundColor(colors.black)
+print(" ")
+term.setCursorPos(27,8)
+term.setBackgroundColor(colors.black)
+print(" ")
+term.setCursorPos(28,9)
+term.setBackgroundColor(colors.black)
+print(" ")
+term.setCursorPos(28,10)
+term.setBackgroundColor(colors.black)
+print(" ")
+term.setCursorPos(27,11)
+term.setBackgroundColor(colors.black)
+print(" ")
+term.setCursorPos(26,12)
+term.setBackgroundColor(colors.black)
+print(" ")
+term.setCursorPos(25,13)
+term.setBackgroundColor(colors.black)
+print(" ")
+
+
+end
+
+
+function printF()
+term.setCursorPos(31,5)
+term.setBackgroundColor(colors.black)
+print("              ")
+term.setCursorPos(31,6)
+term.setBackgroundColor(colors.black)
+print(" ")
+term.setCursorPos(31,7)
+term.setBackgroundColor(colors.black)
+print(" ")
+term.setCursorPos(31,8)
+term.setBackgroundColor(colors.black)
+print(" ")
+term.setCursorPos(31,9)
+term.setBackgroundColor(colors.black)
+print("         ")
+term.setCursorPos(31,10)
+term.setBackgroundColor(colors.black)
+print(" ")
+term.setCursorPos(31,11)
+term.setBackgroundColor(colors.black)
+print(" ")
+term.setCursorPos(31,12)
+term.setBackgroundColor(colors.black)
+print(" ")
+term.setCursorPos(31,13)
+term.setBackgroundColor(colors.black)
+print(" ")
+term.setCursorPos(31,14)
+term.setBackgroundColor(colors.black)
+print(" ")
+
+
+end
+
+function drawGCS()
+term.setBackgroundColour(colors.white)
+term.setTextColor(colors.black)
+term.clear()
+
+print("                                                   ")
+print("                                                   ")
+print("                        NDF                        ")
+print("              General Control System               ")
+print("                                                   ")
+print("                                                   ")
+print("  ##################                               ")
+print("  #                #                               ")
+print("  #  Force Field   #                               ")
+print("  #                #                               ")
+print("  ##################                               ")
+print("                                                   ")
+print("                                                   ")
+print("                                                   ")
+print("                                                   ")
+print("                                                   ")
+print("                                                   ")
+print("                                                   ")
+titleBar()
+if getLine("var/settings", 6)=="OSTime: Visible" then
+  titleTime()
+	else
+	end
+
+term.setCursorPos(3,7)
+term.setBackgroundColor(colors.white)
+print("                  ")
+term.setCursorPos(3,8)
+term.setBackgroundColor(colors.white)
+print(" ")
+term.setCursorPos(3,9)
+term.setBackgroundColor(colors.white)
+print(" ")
+term.setCursorPos(3,10)
+term.setBackgroundColor(colors.white)
+print(" ")
+term.setCursorPos(3,11)
+term.setBackgroundColor(colors.white)
+print("                  ")
+
+term.setCursorPos(20,8)
+term.setBackgroundColor(colors.white)
+print(" ")
+term.setCursorPos(20,9)
+term.setBackgroundColor(colors.white)
+print(" ")
+term.setCursorPos(20,10)
+term.setBackgroundColor(colors.white)
+print(" ")
+
+
+term.setCursorPos(4,8)
+term.setBackgroundColor(colors.gray)
+print("                ")
+term.setCursorPos(4,9)
+term.setBackgroundColor(colors.gray)
+print("                ")
+term.setCursorPos(6,9)
+term.setTextColor(colors.white)
+print("Force Field")
+term.setCursorPos(4,10)
+term.setBackgroundColor(colors.gray)
+print("                ")
+end
+
+
+
+function exists(path)
+	local file = assert(io.open(path, "r"))
+	if file ~= nil then
+		file:close()
+		return true
+	end
+	
+	return false
+end
+
+function getTable(path)
+	if exists(path) then
+		local file = io.open(path, "r")
+		local lines = {}
+		local i = 1
+		local line = file:read("*l")
+		while line ~= nil do
+			lines[i] = line
+			line = file:read("*l")
+			i = i + 1
+		end
+		file:close()
+		return lines
+	end
+	return {}
+end
+
+function getLine(path, n)
+	if exists(path) then
+		local lines = getTable(path)
+		return lines[n]
+	end
+	return ""
+end
+
+function getText(path)
+	if exists(path) then
+		local file = assert(io.open(path, "r"))
+		return file:read("*a")
+	end
+	return ""
+end
+
+function fappend(path, text)
+	local file = assert(io.open(path, "a"))
+	file:write(text.."\n")
+	file:close()
+end 
+
+function fwrite(path, text)
+	local file = assert(io.open(path, "w"))
+	file:write(text)
+	file:close()
+end
+
+function fwriteAtStart(path, text)
+	local _text = getText(path)
+	fwrite(path, text.."\n".._text)
+end
+
+function fwriteFromTable(path, t)
+	local text = ""
+	for _, line in pairs(t) do
+		text = text..line.."\n"
+	end
+	fwrite(path, text)
+end
+
+function fappendFromTable(path, t)
+	local text = ""
+	for _, line in pairs(t) do
+		text = text..line.."\n"
+	end
+	fappend(path, text)
+end 
+
+function fwriteAtStartFromTable(path, t)
+	local text = ""
+	for _, line in pairs(t) do
+		text = text..line.."\n"
+	end
+	fwriteAtStart(path, text)
+end
+
+function replaceLine(path, n, text)
+	local lines = getTable(path)
+	lines[n] = text
+	fwriteFromTable(path, lines)
+end
+
+function getName(path)
+	if exists(path) then
+		local lastSlashPos = 1
+		for i = 1, path:len() do
+			if path:sub(i, i) == "/" then
+				lastSlashPos = i
+			end
+		end
+		
+		return path:sub(lastSlashPos + 1)
+	end
+	return ""
+end
+
+function getPath(path)
+	if exists(path) then
+		local lastSlashPos = 1
+		for i = 1, path:len() do
+			if path:sub(i, i) == "/" then
+				lastSlashPos = i
+			end
+		end
+		
+		return path:sub(1, lastSlashPos)
+	end
+	return ""
+end
+
+function fremove(path)
+	os.remove(path)
+end
+
+
+
+function drawDesktop()
+
+term.setBackgroundColour(colors.white)
+term.clear()
+drawLogo(18, 7)
+titleBar()
+	if getLine("var/settings", 6)=="OSTime: Visible" then
+	titleTime()
+	else
+	end
+
+	
+	if getLine("var/settings", 4)=="Show Icons: True" then
+		if getLine("var/settings", 5)=="Icons: 1" then
+			drawIcon("Control", 3, 3)
+			else
+		end
+		else
+	end
+
+end
