@@ -1,0 +1,15 @@
+os.loadAPI("kernal")
+term.setBackgroundColour(colors.white)
+term.clear()
+if kernal.getLine("var/settings", 7)=="Startup Logo: Visible" then
+kernal.printN()
+sleep(0.7)
+kernal.printD()
+sleep(0.7)
+kernal.printF()
+kernal.drawLogo(33, 11)
+sleep(2.5)
+shell.run("gui")
+else
+shell.run("gui")
+end
