@@ -1,0 +1,95 @@
+--Desktop
+slc=0
+gcpX = 0
+gcpY = 0
+gContext = 0
+
+kernal.drawDesktop()
+
+while true do
+
+local event, button, X, Y, p1, p2, p3 = os.pullEvent("mouse_click")
+XY = X..","..Y
+if gContext==0 and slc==0 then
+if X >=0 and X <=60 and Y >= 0 and Y <= 20 and button==1 then
+  kernal.drawDesktop()
+gContext = 0
+slc = 0
+end
+
+if X >=1 and X <=9 and Y == 1 and button==1 then
+kernal.drawDesktop()
+gContext = 0
+slc = 1 
+ kernal.drawStartMenu(1, 2)
+	elseif X >=0 and X <=60 and Y >= 2 and Y <= 20 and button==2 then
+	kernal.drawDesktop()
+	gContext = 1
+	slc = 0
+		if X >= 40 then	
+		X= 41
+		end
+			if Y >=13 then
+			Y= 14
+			end
+				if Y == 1 then
+				Y=2
+				end
+	kernal.GCSContextMenu1Text(X, Y)
+	gcpX=X
+	gcpY=Y
+					elseif X >=3 and X <=9 and Y >=3 and Y <= 6 and button==1 then 
+					shell.run("control")
+					end
+else
+
+if slc==1 then
+gContext=0
+gcpX = 0
+gcpY = 0
+	if X >=3 and X <=15 and Y == 3 and button==1 then slc=0
+	--Help
+	kernal.drawDesktop()
+	elseif X >=3 and X <=15 and Y == 4 and button==1 then slc=0
+	--Control Panel
+	kernal.drawDesktop()
+	elseif X >=3 and X <=15 and Y == 5 and button==1 then slc=0
+	--Programs
+	kernal.drawDesktop()
+	elseif X >=3 and X <=15 and Y == 6 and button==1 then slc=0
+	os.reboot()
+	elseif X >=3 and X <=15 and Y == 7 and button==1 then slc=0
+	os.shutdown()
+	elseif X >=0 and X <=60 and Y >= 0 and Y <= 20 and button==1 then slc=0
+	kernal.drawDesktop()
+	end
+end
+if gContext==1 then
+ffContext=0
+	if X >=gcpX and X <=gcpX+11 and Y == gcpY and button==1 then gContext=0
+	
+	kernal.drawDesktop()
+	elseif X >=gcpX and X <=gcpX+11 and Y == gcpY+1 and button==1 then gContext=0
+	
+	kernal.drawDesktop()
+	elseif X >=gcpX and X <=gcpX+11 and Y == gcpY+2 and button==1 then gContext=0
+	
+	kernal.drawDesktop()
+	elseif X >=gcpX and X <=gcpX+11 and Y == gcpY+3 and button==1 then gContext=0
+	os.shutdown()
+	kernal.drawDesktop()
+	elseif X >=gcpX and X <=gcpX+11 and Y == gcpY+4 and button==1 then gContext=0
+	shell.run("edit","var/settings")
+	kernal.drawDesktop()
+	elseif X >=0 and X <=60 and Y >= 0 and Y <= 20 and button==1 then gContext=0
+	kernal.drawDesktop()
+	end
+elseif gContext==0 then
+gcpX = 0
+gcpY = 0
+end
+
+
+
+end
+end
